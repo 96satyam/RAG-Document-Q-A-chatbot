@@ -15,10 +15,10 @@ load_dotenv()
 # Loading groq API key
 
 
-os.environ['GROQ_API_KEY'] = "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"
-os.environ['HF_TOKEN'] = "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"
+os.environ['GROQ_API_KEY'] = os.getenv("GROQ_API_KEY")
+os.environ['HF_TOKEN'] = os.getenv("HF_TOKEN")
 
-groq_api_key = "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"
+groq_api_key = os.getenv("GROQ_API_KEY")
 
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 
